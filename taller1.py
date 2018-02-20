@@ -24,8 +24,8 @@ for i in range(len(q)):
 print ("ingrese cadena a evaluar ")
 
 stra= input ()
-stat= mt.key()
-valu = mt.values()
+# stat= mt.key()
+# valu = mt.values()
 
 for i in (stra):
     print(i)
