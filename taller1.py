@@ -26,6 +26,10 @@ print ("ingrese cadena a evaluar ")
 stra= input ()
 # stat= mt.key()
 # valu = mt.values()
-
-for i in (stra):
-    print(i)
+state = q0
+for i in stra:
+    state = mt[state][i]
+if state in qf:
+    print (" la palabra es correcta")
+else:
+    print (" palabra incorrecta ")
