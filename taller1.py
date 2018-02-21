@@ -1,12 +1,19 @@
 import sys
 
-
+print (" introduce un alfabeto,  separado por espacios: ")
 alf = list(map(str, sys.stdin.readline().strip().split(' ')))
 print (alf)
-q = list(map(str,  sys.stdin.readline().strip().split(' ')))
 
-q0= input(" introduce el estado inicial ")
+print ("estados (separados por espacios): ")
+q = list(map(str,  sys.stdin.readline().strip().split(' ')))
+print (q)
+
+q0= input(" introduce el estado inicial: ")
+print (q0)
+
+print (" estado final/es separados por espacios: ")
 qf = list(map(str,  sys.stdin.readline().strip().split(' ')))
+print (qf)
 
 mt={}
 
@@ -24,12 +31,11 @@ for i in range(len(q)):
 print ("ingrese cadena a evaluar ")
 
 stra= input ()
-# stat= mt.key()
-# valu = mt.values()
+
 state = q0
 for i in stra:
     state = mt[state][i]
 if state in qf:
-    print (" la palabra es correcta")
+    print (" cadena aceptada, FELICIDADES! ")
 else:
-    print (" palabra incorrecta ")
+    print (" cadena no aceptada ")
